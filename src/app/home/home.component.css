@@ -1,0 +1,73 @@
+.banner {
+    background: linear-gradient(45deg, #800000, #000000, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  .banner h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .banner p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .banner button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: bounceIn 1s ease-out 0.5s both;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.5s;
+  }
+  
+  .banner button:hover::before {
+    left: 100%;
+  }
+  
+  .banner button:hover {
+    background-color: #800000;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
