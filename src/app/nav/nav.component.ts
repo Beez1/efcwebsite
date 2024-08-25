@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -11,19 +10,35 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './nav.component.css'
 })
 export class NavComponent implements OnInit {
-[x: string]: any;
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      document.addEventListener('DOMContentLoaded', () => {
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        navToggle?.addEventListener('click', () => {
-          navLinks?.classList.toggle('active');
-        });
-      });
+      const navToggle = document.getElementById('nav-toggle');
+      if (navToggle) {
+        navToggle.addEventListener('click', this.toggleNav.bind(this));
+      }
     }
+  }
+
+  private toggleNav() {
+    const navDrawer = document.getElementById('nav-drawer');
+    const navOverlay = document.createElement('div');
+    
+    navOverlay.className = 'nav-overlay';
+    document.body.appendChild(navOverlay);
+    
+    if (navDrawer) {
+      navDrawer.classList.toggle('open');
+    }
+    navOverlay.classList.toggle('active');
+  
+    navOverlay.addEventListener('click', () => {
+      if (navDrawer) {
+        navDrawer.classList.remove('open');
+      }
+      navOverlay.classList.remove('active');
+      document.body.removeChild(navOverlay);
+    });
   }
 }
