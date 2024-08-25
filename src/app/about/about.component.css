@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Modern Minimalist About Hero Section */
+.about-hero {
+    background: linear-gradient(135deg, #800000 0%, #000000 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 6rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://via.placeholder.com/1200x600'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+/* About Content Section */
+.about-content {
+    margin-top: 2rem;
+}
+
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #800000;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section ul li {
+    margin-bottom: 0.75rem;
+}
+
+/* Achievements Section */
+.achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.achievement-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+}
+
+.achievement-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+    font-size: 1.3rem;
+    color: #800000;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-card p {
+    font-size: 1rem;
+    color: #333333;
+}
+
+/* Key Personnel Section */
+.personnel-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.person-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+}
+
+.person-card img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.person-card h3 {
+    font-size: 1.3rem;
+    color: #800000;
+    margin-bottom: 0.5rem;
+}
+
+.person-card p {
+    font-size: 1rem;
+    color: #333333;
+}

@@ -1,0 +1,220 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fixtures-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header Section */
+.fixtures-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.fixtures-header h1 {
+    font-size: 2.5rem;
+    color: #800000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.add-to-calendar-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #800000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-calendar-button:hover {
+    background-color: #000000;
+}
+
+/* Fixtures Content */
+.fixtures-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Monthly Fixtures Section */
+.month-section {
+    margin-bottom: 2rem;
+}
+
+.month-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+    background-color: #800000;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.fixture {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixture:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.fixture-date {
+    text-align: center;
+}
+
+.fixture-date .day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #800000;
+}
+
+.fixture-date .month {
+    font-size: 1.2rem;
+    color: #666666;
+}
+
+.fixture-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fixture-details img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.details-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.fixture-teams {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.fixture-teams span {
+    color: #800000;
+    margin: 0 0.5rem;
+}
+
+.fixture-competition {
+    font-size: 1rem;
+    color: #666666;
+}
+
+.fixture-info {
+    text-align: right;
+}
+
+.fixture-time {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.fixture-venue {
+    font-size: 1rem;
+    color: #666666;
+}
+
+/* League Table Section */
+.league-table-section {
+    margin-top: 2.5rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.league-title {
+    font-size: 1.8rem;
+    color: #800000;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.table-wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    text-align: left;
+    font-size: 1rem;
+    color: #333333;
+    border-bottom: 1px solid #cccccc;
+}
+
+.table th {
+    background-color: #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #ececec;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fixture {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .fixtures-header h1 {
+        font-size: 2rem;
+    }
+
+    .month-title {
+        font-size: 1.5rem;
+    }
+}
