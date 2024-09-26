@@ -1,36 +1,41 @@
 footer {
-  background-color: #ffffff; /* White background for a clean look */
-  color: #000000; /* Black text for contrast */
+  background-color: #ffffff;
+  color: #000000;
   padding: 30px 20px;
   text-align: center;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 footer a {
-  color: #800000; /* Dark red for links */
+  color: #800000;
   text-decoration: none;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
 
 footer a:hover {
-  color: #000000; /* Change to black on hover */
-  transform: scale(1.05); /* Slight scale effect on hover */
+  color: #000000;
+  transform: scale(1.05);
 }
 
 footer p {
   margin: 10px 0;
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
-  color: #333333; /* Slightly lighter black for contrast */
+  color: #333333;
   animation: fadeIn 2s ease-out;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 footer::after {
@@ -43,7 +48,7 @@ footer::after {
   background: linear-gradient(45deg, #800000, #000000);
   background-size: 200% 200%;
   opacity: 0.1;
-  z-index: -1; /* Background gradient effect behind content */
+  z-index: -1;
   animation: gradientMove 10s ease infinite;
 }
 
@@ -56,4 +61,28 @@ footer::after {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 20px 10px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 15px 5px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  footer a {
+    font-size: 14px;
+  }
 }

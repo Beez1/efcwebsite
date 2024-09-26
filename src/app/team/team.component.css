@@ -25,7 +25,7 @@
   text-align: center;
   color: #800000;
   margin-bottom: 2.5rem;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -51,7 +51,7 @@
 .role-title {
   color: #800000;
   margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
   font-weight: 700;
   text-transform: uppercase;
   border-left: 6px solid #800000;
@@ -61,7 +61,7 @@
 
 .squad-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   justify-content: center;
 }
@@ -86,8 +86,8 @@
   margin-bottom: 1rem;
   overflow: hidden;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: clamp(100px, 20vw, 150px);
+  height: clamp(100px, 20vw, 150px);
   margin: 0 auto;
   transition: transform 0.3s ease;
 }
@@ -109,7 +109,7 @@
 }
 
 .player-name {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   font-weight: 700;
   color: #333333;
   margin-bottom: 0.2rem;
@@ -117,45 +117,55 @@
 }
 
 .player-number {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   color: #800000;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .player-role {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   color: #666666;
   margin-bottom: 0.5rem;
 }
 
 .player-flag {
-  width: 25px;
+  width: clamp(20px, 5vw, 25px);
   height: auto;
 }
 
 @media (max-width: 768px) {
+  .team-gallery-container {
+    padding: 1rem;
+  }
+
+  .team-gallery {
+    padding: 2rem 1rem;
+  }
+
+  .role-section {
+    margin-bottom: 2rem;
+  }
+
   .squad-list {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-
-  .player-photo-wrapper {
-      width: 120px;
-      height: 120px;
-  }
-
-  .team-title {
-      font-size: 2rem;
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .squad-list {
-      grid-template-columns: 1fr;
+  .team-gallery-container {
+    padding: 0.5rem;
   }
 
-  .player-photo-wrapper {
-      width: 100px;
-      height: 100px;
+  .team-gallery {
+    padding: 1.5rem 1rem;
+  }
+
+  .role-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .squad-list {
+    gap: 1rem;
   }
 }
